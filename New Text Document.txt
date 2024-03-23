@@ -1,0 +1,5 @@
+1. SQL Basic
+2. DBMS Basic
+3. Advanced SQL
+4. Node+Sequelize+jwt
+5. Flask with ML
