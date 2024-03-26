@@ -1,41 +1,42 @@
-const { Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 
-module.exports = (sequelize, DataTypes) =>{
-    class Product extends Model{}
+module.exports = (sequelize, DataTypes) => {
+    class Product extends Model { }
     Product.init({
-        prodName:{
-            type:DataTypes.STRING,
+        prodName: {
+            type: DataTypes.STRING,
             allowNull: false,
             unique: true,
         },
-        description:{
-            type:DataTypes.STRING,
+        description: {
+            type: DataTypes.STRING,
             allowNull: false,
         },
-        categoryId:{
-            type:DataTypes.INTEGER,
+        categoryId: {
+            type: DataTypes.INTEGER,
             references: {
-                model: 'Category', 
+                model: 'Category',
+                key: 'id',
             },
             allowNull: false,
         },
-        brand:{
-            type:DataTypes.STRING,
+        brand: {
+            type: DataTypes.STRING,
             allowNull: false,
         },
-        price:{
-            type:DataTypes.INTEGER,
+        price: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
-        countInStock:{
-            type:DataTypes.INTEGER,
+        countInStock: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
-        rating:{
-            type:DataTypes.INTEGER,
+        rating: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         }
-    },{
+    }, {
         sequelize,
         modelName: 'Product',
         freezeTableName: true,

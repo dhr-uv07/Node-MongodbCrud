@@ -2,7 +2,7 @@ const {Sequelize, DataTypes} = require('sequelize');
 const category = require('./category');
 const product = require('./product');
 
-const sequelize = new Sequelize(`postgres://postgres:123456@localhost:5432/product_management`, {dialect: 'postgres'});
+const sequelize = new Sequelize(`postgres://postgres:31102000@localhost:5432/product_management`, {dialect: 'postgres'});
 
 const connection = async(sequelize) =>{
     try{
