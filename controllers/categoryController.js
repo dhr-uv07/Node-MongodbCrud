@@ -53,7 +53,7 @@ const getCategoryWiseProducts = async (req, res) => {
       }],
       order: [
         ['catName', 'ASC'], 
-        [{ model: Product, as: 'products' }, 'prodName', 'ASC'],
+        // [{ model: Product, as: 'products' }, 'prodName', 'ASC'],
       ],
     });
     return res.status(200).json(categoriesWithProducts);
